@@ -30,7 +30,7 @@ test_set$Subject <- test_subject[,1]
 merged_set <- rbind(train_set, test_set)
 
 #Step 2: Extracts only the measurements on the mean and standard deviation for each measurement
-mean_std_features <- features[,2][grep("-(mean|std)\\(\\)", features[, 2])]
+mean_std_features <- features[grep("-(mean|std)\\(", features[, 2]), 2]
 mean_std_set <- merged_set[,which(names(merged_set) %in% c(as.character(mean_std_features), "Label", "Subject"))]
 
 #Step 3: Uses descriptive activity names to name the activities in the data set
