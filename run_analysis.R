@@ -34,7 +34,7 @@ mean_std_features <- features[,2][grep("-(mean|std)\\(\\)", features[, 2])]
 mean_std_set <- merged_set[,which(names(merged_set) %in% c(as.character(mean_std_features), "Label", "Subject"))]
 
 #Step 3: Uses descriptive activity names to name the activities in the data set
-mean_std_set$Activity <- sapply(mean_std_set$Label, function(x) {activity_labels[activity_labels$V1==x,"V2"]})
+mean_std_set$Activity <- activity_labels[mean_std_set$Label,2]
 
 #Step 4: Appropriately labels the data set with descriptive variable names
 names(mean_std_set) <- gsub("^t", "Time", names(mean_std_set))
