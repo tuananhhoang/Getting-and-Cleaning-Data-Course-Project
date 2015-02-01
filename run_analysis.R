@@ -1,5 +1,5 @@
 #Step 1: Merges the training and the test sets to create one data set
-setwd("C:\\UCI HAR Dataset")
+#Make sure that current directory is at "UCI HAR Dataset" directory
 
 activity_labels <- read.table("activity_labels.txt")
 features <- read.table("features.txt")
@@ -37,9 +37,13 @@ mean_std_set <- merged_set[,which(names(merged_set) %in% c(as.character(mean_std
 mean_std_set$Activity <- sapply(mean_std_set$Label, function(x) {activity_labels[activity_labels$V1==x,"V2"]})
 
 #Step 4: Appropriately labels the data set with descriptive variable names
-#Alreday done in step #1
+names(mean_std_set) <- gsub("^t", "Time", names(mean_std_set))
+names(mean_std_set) <- gsub("^f", "Frequency", names(mean_std_set))
+names(mean_std_set) <- gsub("Acc", "Acceleration", names(mean_std_set))
+names(mean_std_set) <- gsub("Gyro", "Gyroscope", names(mean_std_set))
+names(mean_std_set) <- gsub("Mag", "Magnitude", names(mean_std_set))
 
 #Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 group_by_set <- mean_std_set[,c("Activity", "Subject")]
 mean_std_set <- mean_std_set[,!(names(mean_std_set) %in% c("Label", "Subject", "Activity"))]
-write.csv(aggregate(mean_std_set, by=group_by_set, FUN=mean), file = "tidy.txt")
+write.table(aggregate(mean_std_set, by=group_by_set, FUN=mean), file="tidy.txt", sep = ",", row.names=FALSE)
