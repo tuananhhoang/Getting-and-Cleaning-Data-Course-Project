@@ -27,3 +27,76 @@ This dataset is distributed AS-IS and no responsibility implied or explicit can 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
 
 # Code book
+The tidy data contains average values of 66 variables, in which each row is for a combination of Activity and Subject values.
+* *Subject* identifies the persons who participated the experiments
+* *Activity* is among following six activities: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING 
+* The 66 variables are included in below table:
+
+No | Variable Names
+---| -------------
+1  | TimeBodyAcceleration-mean()-X
+2  | TimeBodyAcceleration-mean()-Y
+3  | TimeBodyAcceleration-mean()-Z
+4  | TimeBodyAcceleration-std()-X
+5  | TimeBodyAcceleration-std()-Y
+6  | TimeBodyAcceleration-std()-Z
+7  | TimeGravityAcceleration-mean()-X
+8  | TimeGravityAcceleration-mean()-Y
+9  | TimeGravityAcceleration-mean()-Z
+10 | TimeGravityAcceleration-std()-X
+11 | TimeGravityAcceleration-std()-Y
+12 | TimeGravityAcceleration-std()-Z
+13 | TimeBodyAccelerationJerk-mean()-X
+14 | TimeBodyAccelerationJerk-mean()-Y
+15 | TimeBodyAccelerationJerk-mean()-Z
+16 | TimeBodyAccelerationJerk-std()-X
+17 | TimeBodyAccelerationJerk-std()-Y
+18 | TimeBodyAccelerationJerk-std()-Z
+19 | TimeBodyGyroscope-mean()-X
+20 | TimeBodyGyroscope-mean()-Y
+21 | TimeBodyGyroscope-mean()-Z
+22 | TimeBodyGyroscope-std()-X
+23 | TimeBodyGyroscope-std()-Y
+24 | TimeBodyGyroscope-std()-Z
+25 | TimeBodyGyroscopeJerk-mean()-X
+26 | TimeBodyGyroscopeJerk-mean()-Y
+27 | TimeBodyGyroscopeJerk-mean()-Z
+28 | TimeBodyGyroscopeJerk-std()-X
+29 | TimeBodyGyroscopeJerk-std()-Y
+30 | TimeBodyGyroscopeJerk-std()-Z
+31 | TimeBodyAccelerationMagnitude-mean()
+32 | TimeBodyAccelerationMagnitude-std()
+33 | TimeGravityAccelerationMagnitude-mean()
+34 | TimeGravityAccelerationMagnitude-std()
+35 | TimeBodyAccelerationJerkMagnitude-mean()
+36 | TimeBodyAccelerationJerkMagnitude-std()
+37 | TimeBodyGyroscopeMagnitude-mean()
+38 | TimeBodyGyroscopeMagnitude-std()
+39 | TimeBodyGyroscopeJerkMagnitude-mean()
+40 | TimeBodyGyroscopeJerkMagnitude-std()
+41 | FrequencyBodyAcceleration-mean()-X
+42 | FrequencyBodyAcceleration-mean()-Y
+43 | FrequencyBodyAcceleration-mean()-Z
+44 | FrequencyBodyAcceleration-std()-X
+45 | FrequencyBodyAcceleration-std()-Y
+46 | FrequencyBodyAcceleration-std()-Z
+47 | FrequencyBodyAccelerationJerk-mean()-X
+48 | FrequencyBodyAccelerationJerk-mean()-Y
+49 | FrequencyBodyAccelerationJerk-mean()-Z
+50 | FrequencyBodyAccelerationJerk-std()-X
+51 | FrequencyBodyAccelerationJerk-std()-Y
+52 | FrequencyBodyAccelerationJerk-std()-Z
+53 | FrequencyBodyGyroscope-mean()-X
+54 | FrequencyBodyGyroscope-mean()-Y
+55 | FrequencyBodyGyroscope-mean()-Z
+56 | FrequencyBodyGyroscope-std()-X
+57 | FrequencyBodyGyroscope-std()-Y
+58 | FrequencyBodyGyroscope-std()-Z
+59 | FrequencyBodyAccelerationMagnitude-mean()
+60 | FrequencyBodyAccelerationMagnitude-std()
+61 | FrequencyBodyBodyAccelerationJerkMagnitude-mean()
+62 | FrequencyBodyBodyAccelerationJerkMagnitude-std()
+63 | FrequencyBodyBodyGyroscopeMagnitude-mean()
+64 | FrequencyBodyBodyGyroscopeMagnitude-std()
+65 | FrequencyBodyBodyGyroscopeJerkMagnitude-mean()
+66 | FrequencyBodyBodyGyroscopeJerkMagnitude-std()
