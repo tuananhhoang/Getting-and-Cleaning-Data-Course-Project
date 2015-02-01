@@ -8,23 +8,23 @@ train_set <- read.table("train/X_train.txt")
 train_label <- read.table("train/y_train.txt")
 train_subject <- read.table("train/subject_train.txt")
 
+#Labels the data set with descriptive variable names
+names(train_set) <- features[,2]
+
 #Merge train_set, train_label and train_subject together
 train_set$Label <- train_label[,1]
 train_set$Subject <- train_subject[,1]
-
-#Labels the data set with descriptive variable names
-names(train_set) <- features[,2]
 
 test_set <- read.table("test/X_test.txt")
 test_label <- read.table("test/y_test.txt")
 test_subject <- read.table("test/subject_test.txt")
 
+#Labels the data set with descriptive variable names
+names(test_set) <- features[,2]
+
 #Merge test_set, test_label and test_subject together
 test_set$Label <- test_label[,1]
 test_set$Subject <- test_subject[,1]
-
-#Labels the data set with descriptive variable names
-names(test_set) <- features[,2]
 
 #Do merging the training and the test sets
 merged_set <- rbind(train_set, test_set)
