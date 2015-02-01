@@ -40,4 +40,6 @@ mean_std_set$Activity <- sapply(mean_std_set$Label, function(x) {activity_labels
 #Alreday done in step #1
 
 #Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-write.csv(aggregate(mean_std_set, by=list(mean_std_set$Activity, mean_std_set$Subject), FUN=mean), file = "tidy.txt")
+group_by_set <- mean_std_set[,c("Activity", "Subject")]
+mean_std_set <- mean_std_set[,!(names(mean_std_set) %in% c("Label", "Subject", "Activity"))]
+write.csv(aggregate(mean_std_set, by=group_by_set, FUN=mean), file = "tidy.txt")
